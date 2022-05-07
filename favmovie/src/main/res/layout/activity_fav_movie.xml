@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".feature.main.MainActivity">
+    tools:context=".feature.favmovie.FavMovieActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/srl_content"
@@ -18,7 +18,7 @@
 
             <include
                 android:id="@+id/i_loading"
-                layout="@layout/layout_loading_main_activity"
+                layout="@layout/layout_loading_fav_movie_activity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"

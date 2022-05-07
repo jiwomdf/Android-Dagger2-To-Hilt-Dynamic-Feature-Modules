@@ -39,19 +39,4 @@ class MainViewModel @Inject constructor(@Named("AppModule") private val useCase:
                 })
         )
     }
-
-    private val _favMovies = MutableLiveData<Resource<List<Movie>>>()
-    val favMovies = _favMovies as LiveData<Resource<List<Movie>>>
-    fun getFavMMovies(){
-        collect(
-            useCase.getFavMovies()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ response ->
-                    _favMovies.postValue(response)
-                }, { error ->
-                    _favMovies.postValue(Resource.Error(error.localizedMessage ?: ""))
-                })
-        )
-    }
 }

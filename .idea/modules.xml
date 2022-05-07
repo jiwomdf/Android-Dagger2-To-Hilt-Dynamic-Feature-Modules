@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Capstone.iml" filepath="$PROJECT_DIR$/.idea/modules/Capstone.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Capstone.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Capstone.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Capstone.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Capstone.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.iml" />
     </modules>
   </component>

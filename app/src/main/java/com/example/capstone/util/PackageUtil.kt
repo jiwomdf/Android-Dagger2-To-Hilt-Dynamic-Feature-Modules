@@ -5,5 +5,7 @@ object PackageUtil {
         const val reflection = "com.example.moviedetail.feature.detail.DetailMovieActivity"
         const val movie_id = "movie_id"
     }
-
+    object FavMovieActivity {
+        const val reflection = "com.example.favmovie.feature.favmovie.FavMovieActivity"
+    }
 }

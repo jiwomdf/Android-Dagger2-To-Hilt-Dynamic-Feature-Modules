@@ -3,7 +3,7 @@ package com.example.capstone.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstone.feature.main.MainViewModel
-import com.example.capstone.ui.ViewModelFactory
+import com.example.core.factory.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

@@ -9,14 +9,14 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.capstone.App
 import com.example.capstone.R
-import com.example.capstone.databinding.ActivityDetailBinding
 import com.example.capstone.util.fadeInAndOut
 import com.example.capstone.util.setDashIfNullOrEmpty
 import com.example.capstone.util.showBottomSheet
 import com.example.capstone.util.stopFadeInAndOut
 import com.example.core.data.Resource
-import com.example.capstone.ui.ViewModelFactory
+import com.example.core.factory.ViewModelFactory
 import com.example.core.utils.Constant
+import com.example.moviedetail.databinding.ActivityDetailBinding
 import com.example.moviedetail.di.DaggerMovieDetailComponent
 import com.example.moviedetail.di.MovieDetailComponent
 import javax.inject.Inject
@@ -127,29 +127,29 @@ class DetailMovieActivity: AppCompatActivity() {
         binding.iLoading.root.isVisible = isVisible
         binding.clContent.isVisible = !isVisible
         if(isVisible){
-            binding.iLoading.iLoadingFav.root.fadeInAndOut()
-            binding.iLoading.iLoadingTitle.root.fadeInAndOut()
-            binding.iLoading.iLoadingTagLine.root.fadeInAndOut()
-            binding.iLoading.iLoadingImdb.root.fadeInAndOut()
-            binding.iLoading.iLoadingVote.root.fadeInAndOut()
-            binding.iLoading.iLoadingDscLabel.root.fadeInAndOut()
-            binding.iLoading.iLoadingDsc.root.fadeInAndOut()
+            binding.iLoading.iLoadingFav.fadeInAndOut()
+            binding.iLoading.iLoadingTitle.fadeInAndOut()
+            binding.iLoading.iLoadingTagLine.fadeInAndOut()
+            binding.iLoading.iLoadingImdb.fadeInAndOut()
+            binding.iLoading.iLoadingVote.fadeInAndOut()
+            binding.iLoading.iLoadingDscLabel.fadeInAndOut()
+            binding.iLoading.iLoadingDsc.fadeInAndOut()
         } else {
-            binding.iLoading.iLoadingFav.root.stopFadeInAndOut()
-            binding.iLoading.iLoadingTitle.root.stopFadeInAndOut()
-            binding.iLoading.iLoadingTagLine.root.stopFadeInAndOut()
-            binding.iLoading.iLoadingImdb.root.stopFadeInAndOut()
-            binding.iLoading.iLoadingVote.root.stopFadeInAndOut()
-            binding.iLoading.iLoadingDscLabel.root.stopFadeInAndOut()
-            binding.iLoading.iLoadingDsc.root.stopFadeInAndOut()
+            binding.iLoading.iLoadingFav.stopFadeInAndOut()
+            binding.iLoading.iLoadingTitle.stopFadeInAndOut()
+            binding.iLoading.iLoadingTagLine.stopFadeInAndOut()
+            binding.iLoading.iLoadingImdb.stopFadeInAndOut()
+            binding.iLoading.iLoadingVote.stopFadeInAndOut()
+            binding.iLoading.iLoadingDscLabel.stopFadeInAndOut()
+            binding.iLoading.iLoadingDsc.stopFadeInAndOut()
         }
     }
 
     private fun setLoadingFavAnimation(isVisible: Boolean){
         if(isVisible){
-            binding.iLoading.iLoadingFav.root.fadeInAndOut()
+            binding.iLoading.iLoadingFav.fadeInAndOut()
         } else {
-            binding.iLoading.iLoadingFav.root.stopFadeInAndOut()
+            binding.iLoading.iLoadingFav.stopFadeInAndOut()
         }
     }
 

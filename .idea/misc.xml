@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/activity_detail.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/fragment_favotire.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/fragment_home.xml" value="0.11296296296296296" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/layout_loading_card.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/layout_loading_detail_movie.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/layout/layout_loading_main_activity.xml" value="0.1" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/app/src/main/res/menu/menus.xml" value="0.11296296296296296" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/favmovie/src/main/res/layout/activity_fav_movie.xml" value="0.1" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/favmovie/src/main/res/layout/layout_loading_fav_movie_activity.xml" value="0.1" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/moviedetail/src/main/res/layout/activity_detail.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/moviedetail/src/main/res/layout/activity_fav_movie.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/User/StudioProjects/Capstone-20220505T003047Z-001/Capstone/moviedetail/src/main/res/layout/layout_loading_detail_movie.xml" value="0.10989583333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

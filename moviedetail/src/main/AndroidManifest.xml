@@ -8,7 +8,7 @@
 
     <dist:module
         dist:instant="false"
-        dist:title="@string/title_moviedetail">
+        dist:title="@string/title_movie_detail">
         <dist:delivery>
             <dist:on-demand />
         </dist:delivery>

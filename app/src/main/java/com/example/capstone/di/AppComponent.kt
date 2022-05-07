@@ -1,6 +1,5 @@
 package com.example.capstone.di
 
-import com.example.capstone.feature.main.FavoriteFragment
 import com.example.capstone.feature.main.HomeFragment
 import com.example.capstone.feature.main.MainActivity
 import com.example.core.di.CoreComponent
@@ -19,5 +18,4 @@ interface AppComponent {
 
     fun inject(activity: MainActivity)
     fun inject(fragment: HomeFragment)
-    fun inject(fragment: FavoriteFragment)
 }

@@ -17,7 +17,7 @@ import com.example.capstone.util.PackageUtil
 import com.example.capstone.util.fadeInAndOut
 import com.example.capstone.util.stopFadeInAndOut
 import com.example.core.data.Resource
-import com.example.capstone.ui.ViewModelFactory
+import com.example.core.factory.ViewModelFactory
 import com.jakewharton.rxbinding4.widget.textChangeEvents
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
