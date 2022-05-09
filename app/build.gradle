@@ -21,7 +21,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -42,4 +46,5 @@ dependencies {
     implementation "com.jakewharton.rxbinding4:rxbinding:$rxbinding_version"
     implementation "com.jakewharton.rxbinding4:rxbinding-appcompat:$rxbinding_version"
 
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 }

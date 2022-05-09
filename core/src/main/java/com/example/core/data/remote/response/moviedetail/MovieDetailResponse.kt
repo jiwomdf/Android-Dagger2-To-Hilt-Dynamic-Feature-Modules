@@ -1,7 +1,9 @@
 package com.example.core.data.remote.response.moviedetail
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+@Keep
 data class MovieDetailResponse (
     @field:SerializedName("adult")
     val adult: Boolean,
