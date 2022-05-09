@@ -39,6 +39,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"
     androidTestImplementation "androidx.room:room-testing:$room_version"
+    implementation "net.zetetic:android-database-sqlcipher:$sql_cipher"
 
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"

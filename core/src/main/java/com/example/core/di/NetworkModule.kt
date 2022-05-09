@@ -5,6 +5,7 @@ import com.example.core.utils.Constant.BASE_URL
 import com.example.core.utils.Constant.TMDB_API_KEY
 import dagger.Module
 import dagger.Provides
+import okhttp3.CertificatePinner
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,6 +17,13 @@ import java.util.concurrent.TimeUnit
 
 @Module
 class NetworkModule {
+
+    private val hostname = "api.themoviedb.org"
+    private val certificatePinner = CertificatePinner.Builder()
+        .add(hostname,"sha256/oD/WAoRPvbez1Y2dfYfuo4yujAcYHXdv1Ivb2v2MOKk=")
+        .add(hostname,"sha256/JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=")
+        .add(hostname,"sha256/++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=")
+        .build()
 
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
@@ -35,6 +43,7 @@ class NetworkModule {
             })
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
 
