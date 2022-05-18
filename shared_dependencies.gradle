@@ -13,7 +13,7 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.activity:activity-ktx:$activity_ktx_version"
-    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+        implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
 
     //Dagger
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -25,7 +25,16 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version"
 
+
+    //Test
+    implementation "androidx.test.ext:junit-ktx:$junit_ktx"
+    testImplementation "androidx.arch.core:core-testing:$core_testing"
     testImplementation "junit:junit:$junit_version"
+    testImplementation "org.mockito:mockito-core:$mockito_core"
+    testImplementation "org.mockito:mockito-inline:$mockito_core"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitokotlin2"
+    androidTestImplementation "androidx.arch.core:core-testing:$core_testing"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
 }
