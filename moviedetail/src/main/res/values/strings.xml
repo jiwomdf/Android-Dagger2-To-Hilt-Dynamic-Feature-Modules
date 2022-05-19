@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_movie_detail">Movie Detail</string>
+
+    <!-- Movie Detail -->
+    <string name="imbd_id">IMBD ID:</string>
+    <string name="vote">Vote</string>
+    <string name="description">Description:</string>
+</resources>

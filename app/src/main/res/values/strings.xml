@@ -1,21 +1,13 @@
 <resources>
     <string name="app_name">Capstone</string>
-    <string name="title_movie_detail">Movie Detail</string>
-    <string name="title_favorite_movie">Favorite Movie</string>
 
     <!-- Common -->
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
     <string name="oke">Oke</string>
 
-    <!-- Movie Detail -->
-    <string name="imbd_id">IMBD ID:</string>
-    <string name="vote">Vote</string>
-    <string name="description">Description:</string>
-
     <!-- Bottom Sheet Error -->
     <string name="text_error_title">Error Occurred</string>
     <string name="text_error_dsc">Sorry.. there is an error, please try again</string>
-
 
 </resources>
