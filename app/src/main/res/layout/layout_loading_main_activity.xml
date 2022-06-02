@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/i_loading_1"
+            layout="@layout/layout_loading_card"
+            android:layout_margin="16dp"
+            android:layout_width="170dp"
+            android:layout_height="220dp" />
+
+        <include
+            android:id="@+id/i_loading_2"
+            layout="@layout/layout_loading_card"
+            android:layout_margin="16dp"
+            android:layout_width="170dp"
+            android:layout_height="220dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/i_loading_3"
+            layout="@layout/layout_loading_card"
+            android:layout_margin="16dp"
+            android:layout_width="170dp"
+            android:layout_height="220dp" />
+
+        <include
+            android:id="@+id/i_loading_4"
+            layout="@layout/layout_loading_card"
+            android:layout_margin="16dp"
+            android:layout_width="170dp"
+            android:layout_height="220dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/i_loading_5"
+            layout="@layout/layout_loading_card"
+            android:layout_margin="16dp"
+            android:layout_width="170dp"
+            android:layout_height="220dp" />
+
+        <include
+            android:id="@+id/i_loading_6"
+            layout="@layout/layout_loading_card"
+            android:layout_margin="16dp"
+            android:layout_width="170dp"
+            android:layout_height="220dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

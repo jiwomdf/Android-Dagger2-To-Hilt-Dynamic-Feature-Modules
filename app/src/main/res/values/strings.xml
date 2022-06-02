@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Capstone</string>
+
+    <!-- Common -->
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="oke">Oke</string>
+
+    <!-- Bottom Sheet Error -->
+    <string name="text_error_title">Error Occurred</string>
+    <string name="text_error_dsc">Sorry.. there is an error, please try again</string>
+
+</resources>

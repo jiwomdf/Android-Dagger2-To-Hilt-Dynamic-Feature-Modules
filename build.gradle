@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.5.21"
+    ext.appcompat_version = "1.1.0"
+    ext.core_ktx_version = "1.3.2"
+    ext.constraint_version = "2.0.4"
+    ext.legacy_support_version = "1.0.0"
+    ext.junit_version = "4.13.1"
+    ext.androidx_junit_version = "1.1.2"
+    ext.espresso_version = "3.3.0"
+    ext.multidex_version = "2.0.1"
+
+    ext.cardview_version = "1.0.0"
+    ext.recyclerview_version = "1.1.0"
+    ext.material_version = "1.2.1"
+    ext.glide_version = "4.11.0"
+
+    ext.room_version = "2.4.1"
+    ext.sql_cipher = "4.4.0"
+
+    ext.retrofit_version = "2.9.0"
+    ext.logging_interceptor_version = "4.9.1"
+
+    ext.rxjava_version = "2.2.19"
+    ext.rxandroid_version = "2.1.1"
+    ext.rxbinding_version = "4.0.0"
+    ext.rxjava3_retrofit_adapter_version = "3.0.0"
+    ext.lifecycle_version = "2.2.0"
+    ext.metajava_jvm_version = "0.3.0"
+
+    ext.dagger_version = "2.34"
+    ext.dagger_hilt_version = "2.38.1"
+    ext.activity_ktx_version = "1.1.0"
+    ext.fragment_ktx_version = '1.2.5'
+
+    ext.leak_canary = "2.9.1"
+
+    ext.core_testing = "2.1.0"
+    ext.mockito_core = "3.6.0"
+    ext.mockitokotlin2 = "2.2.0"
+    ext.junit_ktx = "1.1.3"
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_hilt_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
