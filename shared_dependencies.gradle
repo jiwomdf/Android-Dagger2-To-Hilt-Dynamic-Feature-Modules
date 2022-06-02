@@ -36,5 +36,6 @@ dependencies {
     androidTestImplementation "androidx.arch.core:core-testing:$core_testing"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
 
 }
