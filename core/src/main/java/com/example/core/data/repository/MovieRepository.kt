@@ -34,18 +34,12 @@ class MovieRepository @Inject constructor(
                 return movieDao.getMovies().toFlowable().map {
                     val data = it.map { movie ->
                         Movie(
-                            adult = movie.adult,
                             backdropPath = movie.backdropPath,
                             id = movie.id,
-                            originalLanguage = movie.originalLanguage,
                             originalTitle = movie.originalTitle,
                             overview = movie.overview,
-                            popularity = movie.popularity,
                             posterPath = movie.posterPath,
-                            releaseDate = movie.releaseDate,
                             title = movie.title,
-                            voteAverage = movie.voteAverage,
-                            voteCount = movie.voteCount,
                         )
                     }
                     data
@@ -111,18 +105,12 @@ class MovieRepository @Inject constructor(
             .subscribe({ response ->
                 val dataArray = response.results.map {
                     Movie(
-                        adult = it.adult,
                         backdropPath = it.backdropPath ?: "",
                         id = it.id,
-                        originalLanguage = it.originalLanguage ?: "",
                         originalTitle = it.originalTitle ?: "",
                         overview = it.overview ?: "",
-                        popularity = it.popularity,
                         posterPath = it.posterPath ?: "",
-                        releaseDate = it.releaseDate ?: "",
                         title = it.title ?: "",
-                        voteAverage = it.voteAverage,
-                        voteCount = it.voteCount,
                     )
                 }
                 resultData.onNext(if (dataArray.isNotEmpty()) Resource.Success(dataArray) else Resource.Error(""))
@@ -140,25 +128,12 @@ class MovieRepository @Inject constructor(
                     val data = it.let { movie ->
                         MovieDetail(
                             id = movie.id,
-                            adult = movie.adult,
                             backdropPath = movie.backdropPath,
-                            budget = movie.budget,
-                            homepage = movie.homepage,
                             imdbId = movie.imdbId,
-                            originalLanguage = movie.originalLanguage,
-                            originalTitle = movie.originalTitle,
                             overview = movie.overview,
-                            popularity = movie.popularity,
-                            posterPath = movie.posterPath,
-                            releaseDate = movie.releaseDate,
-                            revenue = movie.revenue,
-                            runtime = movie.runtime,
-                            status = movie.status,
                             tagline = movie.tagline,
                             title = movie.title,
-                            video = movie.video,
                             voteAverage = movie.voteAverage,
-                            voteCount = movie.voteCount,
                         )
                     }
                     data
@@ -236,18 +211,12 @@ class MovieRepository @Inject constructor(
                 .let { movie ->
                     listFavMovie.add(
                         Movie(
-                            adult = movie.adult,
                             backdropPath = movie.backdropPath,
                             id = movie.id,
-                            originalLanguage = movie.originalLanguage,
                             originalTitle = movie.originalTitle,
                             overview = movie.overview,
-                            popularity = movie.popularity,
                             posterPath = movie.posterPath,
-                            releaseDate = movie.releaseDate,
                             title = movie.title,
-                            voteAverage = movie.voteAverage.toFloat(),
-                            voteCount = movie.voteCount,
                         )
                     )
                 }

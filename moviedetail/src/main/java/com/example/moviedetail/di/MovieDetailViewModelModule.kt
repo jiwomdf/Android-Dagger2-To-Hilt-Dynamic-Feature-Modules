@@ -1,6 +1,7 @@
 package com.example.moviedetail.di
 
 import androidx.lifecycle.ViewModel
+import com.example.capstone.di.ViewModelKey
 import com.example.moviedetail.feature.detail.DetailViewModel
 import dagger.Binds
 import dagger.Module
@@ -13,6 +14,6 @@ abstract class MovieDetailViewModelModule {
 
     @Binds
     @IntoMap
-    @MovieDetailViewModelKey(DetailViewModel::class)
+    @ViewModelKey(DetailViewModel::class)
     abstract fun bindDetailMovieViewModel(viewModel: DetailViewModel): ViewModel
 }

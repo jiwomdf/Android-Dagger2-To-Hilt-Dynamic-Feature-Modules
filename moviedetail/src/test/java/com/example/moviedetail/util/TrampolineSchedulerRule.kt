@@ -1,4 +1,4 @@
-package com.example.capstone.util
+package com.example.moviedetail.util
 
 import io.reactivex.android.plugins.RxAndroidPlugins
 import io.reactivex.plugins.RxJavaPlugins

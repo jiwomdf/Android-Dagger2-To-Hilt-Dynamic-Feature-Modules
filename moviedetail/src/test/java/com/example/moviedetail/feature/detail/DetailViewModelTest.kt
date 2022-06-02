@@ -2,7 +2,7 @@ package com.example.moviedetail.feature.detail
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.example.capstone.util.TrampolineSchedulerRule
+import com.example.moviedetail.util.TrampolineSchedulerRule
 import com.example.core.data.Resource
 import com.example.core.domain.model.Movie
 import com.example.core.domain.model.MovieDetail
