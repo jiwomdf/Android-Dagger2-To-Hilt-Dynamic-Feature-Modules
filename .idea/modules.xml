@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Capstone.iml" filepath="$PROJECT_DIR$/.idea/modules/Capstone.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Capstone.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Capstone.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Capstone.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Capstone.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Capstone.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Capstone.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Capstone.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Capstone.app.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Capstone.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Capstone.core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Capstone.core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Capstone.core.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Capstone.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Capstone.core.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Capstone.core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Capstone.core.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.main.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Capstone.favmovie.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.main.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Capstone.moviedetail.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Movieapp.iml" filepath="$PROJECT_DIR$/.idea/modules/Movieapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Movieapp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Movieapp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Movieapp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Movieapp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Movieapp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Movieapp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Movieapp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Movieapp.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Movieapp.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Movieapp.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Movieapp.core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Movieapp.core.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Movieapp.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Movieapp.core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Movieapp.core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Movieapp.core.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.main.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/favmovie/Movieapp.favmovie.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.main.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/moviedetail/Movieapp.moviedetail.unitTest.iml" />
     </modules>
   </component>
 </project>

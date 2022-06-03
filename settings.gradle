@@ -1,4 +1,4 @@
-rootProject.name = "Capstone"
+rootProject.name = "Movieapp"
 include ':app'
 include ':core'
 include ':moviedetail'
