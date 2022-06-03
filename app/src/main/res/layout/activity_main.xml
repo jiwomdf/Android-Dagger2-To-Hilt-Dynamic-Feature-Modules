@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:menu="@menu/menus"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Capstone" />
+        app:title="MovieApp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fcv_main"
