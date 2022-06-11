@@ -56,6 +56,7 @@ class FavMovieActivity : AppCompatActivity() {
                 is Resource.Success, is Resource.Error -> {
                     movieAdapter.listMovie = it.data?.toMutableList() ?: mutableListOf()
                     movieAdapter.notifyDataSetChanged()
+                    binding.tvEmptyMovie.isVisible = (it.data?.size ?: 0) <= 0
                     setLoadingAnimation(false)
                 }
                 is Resource.Loading -> {

@@ -48,6 +48,4 @@ dependencies {
 
     implementation "com.jakewharton.rxbinding4:rxbinding:$rxbinding_version"
     implementation "com.jakewharton.rxbinding4:rxbinding-appcompat:$rxbinding_version"
-
-    debugImplementation "com.squareup.leakcanary:leakcanary-android:${leak_canary}"
 }

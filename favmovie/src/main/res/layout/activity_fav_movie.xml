@@ -39,6 +39,7 @@
                 tools:listitem="@layout/list_movie_item" />
 
             <TextView
+                android:id="@+id/tv_empty_movie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
