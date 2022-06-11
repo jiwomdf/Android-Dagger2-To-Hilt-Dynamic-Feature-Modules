@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Capstone</string>
+    <string name="app_name">Movie App</string>
 
     <!-- Common -->
     <string name="home">Home</string>
