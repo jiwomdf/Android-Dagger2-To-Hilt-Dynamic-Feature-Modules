@@ -9,6 +9,5 @@ import dagger.hilt.components.SingletonComponent
 @EntryPoint
 @InstallIn(SingletonComponent::class)
 interface SubModuleDependencies {
-    fun provideIMovieRepository(): IMovieRepository
     fun proiveMovieUseCase(): MovieUseCase
 }
