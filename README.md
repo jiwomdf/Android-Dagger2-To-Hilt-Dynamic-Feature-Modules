@@ -4,7 +4,7 @@
 
 ## Migrating Dagger 2 to Hilt in Multi Module App
 
-Here is shown how to migrating your Dyanmic Feature App from Dagger 2 to Hilt
+Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
 
 1. Checkout **master** for Dagger 2
 2. Checkout **hilt_multi_module** for Hilt
