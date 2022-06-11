@@ -24,4 +24,4 @@ Here is shown how to migrating your Dyanmic Feature App from Dagger 2 to Hilt
 1. MVVM & Clean architecture 
 2. Modular (Dynamic Feature)
 
-![Project Structure](https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Dagger%202%20to%20Hilt%20In%20Multi%20Module%20App%2Fmovieapp%20(1).jpg?alt=media&token=0bce84e6-7ba1-470b-8e28-e945197c68c7)
+![Project Structure](https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Dagger%202%20to%20Hilt%20In%20Multi%20Module%20App%2Fmovieapp%20(1).jpg?alt=media&token=b772f3eb-8ca4-4624-ac40-806eb3a7374d)
