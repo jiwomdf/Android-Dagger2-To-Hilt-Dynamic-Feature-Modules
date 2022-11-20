@@ -104,22 +104,24 @@ class HomeFragment: Fragment() {
     }
 
     private fun setLoadingAnimation(isVisible: Boolean){
-        binding.iLoading.root.isVisible = isVisible
-        binding.rvMovies.isVisible = !isVisible
-        if(isVisible){
-            binding.iLoading.iLoading1.root.fadeInAndOut()
-            binding.iLoading.iLoading2.root.fadeInAndOut()
-            binding.iLoading.iLoading3.root.fadeInAndOut()
-            binding.iLoading.iLoading4.root.fadeInAndOut()
-            binding.iLoading.iLoading5.root.fadeInAndOut()
-            binding.iLoading.iLoading6.root.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoading1.root.stopFadeInAndOut()
-            binding.iLoading.iLoading2.root.stopFadeInAndOut()
-            binding.iLoading.iLoading3.root.stopFadeInAndOut()
-            binding.iLoading.iLoading4.root.stopFadeInAndOut()
-            binding.iLoading.iLoading5.root.stopFadeInAndOut()
-            binding.iLoading.iLoading6.root.stopFadeInAndOut()
+        with(binding){
+            iLoading.root.isVisible = isVisible
+            rvMovies.isVisible = !isVisible
+            if(isVisible){
+                iLoading.iLoading1.root.fadeInAndOut()
+                iLoading.iLoading2.root.fadeInAndOut()
+                iLoading.iLoading3.root.fadeInAndOut()
+                iLoading.iLoading4.root.fadeInAndOut()
+                iLoading.iLoading5.root.fadeInAndOut()
+                iLoading.iLoading6.root.fadeInAndOut()
+            } else {
+                iLoading.iLoading1.root.stopFadeInAndOut()
+                iLoading.iLoading2.root.stopFadeInAndOut()
+                iLoading.iLoading3.root.stopFadeInAndOut()
+                iLoading.iLoading4.root.stopFadeInAndOut()
+                iLoading.iLoading5.root.stopFadeInAndOut()
+                iLoading.iLoading6.root.stopFadeInAndOut()
+            }
         }
     }
 

@@ -96,22 +96,24 @@ class FavMovieActivity : AppCompatActivity() {
     }
 
     private fun setLoadingAnimation(isVisible: Boolean){
-        binding.iLoading.root.isVisible = isVisible
-        binding.rvMovies.isVisible = !isVisible
-        if(isVisible){
-            binding.iLoading.iLoading1.fadeInAndOut()
-            binding.iLoading.iLoading2.fadeInAndOut()
-            binding.iLoading.iLoading3.fadeInAndOut()
-            binding.iLoading.iLoading4.fadeInAndOut()
-            binding.iLoading.iLoading5.fadeInAndOut()
-            binding.iLoading.iLoading6.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoading1.stopFadeInAndOut()
-            binding.iLoading.iLoading2.stopFadeInAndOut()
-            binding.iLoading.iLoading3.stopFadeInAndOut()
-            binding.iLoading.iLoading4.stopFadeInAndOut()
-            binding.iLoading.iLoading5.stopFadeInAndOut()
-            binding.iLoading.iLoading6.stopFadeInAndOut()
+        with(binding){
+            iLoading.root.isVisible = isVisible
+            rvMovies.isVisible = !isVisible
+            if(isVisible){
+                iLoading.iLoading1.fadeInAndOut()
+                iLoading.iLoading2.fadeInAndOut()
+                iLoading.iLoading3.fadeInAndOut()
+                iLoading.iLoading4.fadeInAndOut()
+                iLoading.iLoading5.fadeInAndOut()
+                iLoading.iLoading6.fadeInAndOut()
+            } else {
+                iLoading.iLoading1.stopFadeInAndOut()
+                iLoading.iLoading2.stopFadeInAndOut()
+                iLoading.iLoading3.stopFadeInAndOut()
+                iLoading.iLoading4.stopFadeInAndOut()
+                iLoading.iLoading5.stopFadeInAndOut()
+                iLoading.iLoading6.stopFadeInAndOut()
+            }
         }
     }
 

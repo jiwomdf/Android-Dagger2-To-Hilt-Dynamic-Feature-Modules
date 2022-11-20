@@ -48,12 +48,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-//        transaction.setCustomAnimations(
-//            R.anim.fragment_fade_enter,
-//            R.anim.fragment_fade_exit,
-//            R.anim.fragment_fade_enter,
-//            R.anim.fragment_fade_exit
-//        )
+        transaction.setCustomAnimations(
+            android.R.anim.fade_in,
+            android.R.anim.fade_out,
+            android.R.anim.fade_in,
+            android.R.anim.fade_out
+        )
         transaction.replace(R.id.fcv_main, fragment, fragment.javaClass.toString())
         transaction.commit()
     }

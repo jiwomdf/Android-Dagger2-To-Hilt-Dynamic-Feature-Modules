@@ -72,84 +72,88 @@ class DetailMovieActivity: AppCompatActivity() {
     }
 
     private fun setListener() {
-        viewModel.moviesDetail.observe(this) {
-            when (it) {
-                is Resource.Success -> {
-                    setLoadingAnimation(isVisible = false)
-                    Glide.with(this)
-                        .load("${Constant.IMAGE_URL_PREFIX_500}${ it.data?.backdropPath }")
-                        .transition(DrawableTransitionOptions.withCrossFade())
-                        .into(binding.ivMovie)
-                    binding.tvTitle.text = it.data?.title?.setDashIfNullOrEmpty()
-                    binding.tvTagLine.text = it.data?.tagline?.setDashIfNullOrEmpty()
-                    binding.tvImbdId.text = it.data?.imdbId?.setDashIfNullOrEmpty()
-                    binding.tvVoteId.text = it.data?.voteAverage.toString().setDashIfNullOrEmpty()
-                    binding.tvOverview.text = it.data?.overview?.setDashIfNullOrEmpty()
-                }
-                is Resource.Loading -> {
-                    setLoadingAnimation(isVisible = true)
-                }
-                is Resource.Error -> {
-                    setLoadingAnimation(isVisible = false)
-                    showBottomSheet(
-                        isCancelable = false,
-                        isFinish = true
-                    )
-                }
-            }
-        }
-
-        viewModel.favMovies.observe(this){
-            when (it) {
-                is Resource.Success -> {
-                    setLoadingFavAnimation(isVisible = false)
-                    isFav = it.data?.any { it.id == movieID } ?: false
-                    if(isFav){
-                        binding.fabFavMovie.backgroundTintList =
-                            AppCompatResources.getColorStateList(this, R.color.red_500)
-                    } else {
-                        binding.fabFavMovie.backgroundTintList =
-                            AppCompatResources.getColorStateList(this, R.color.grey_700)
+        with(binding){
+            viewModel.moviesDetail.observe(this@DetailMovieActivity) {
+                when (it) {
+                    is Resource.Success -> {
+                        setLoadingAnimation(isVisible = false)
+                        Glide.with(this@DetailMovieActivity)
+                            .load("${Constant.IMAGE_URL_PREFIX_500}${ it.data?.backdropPath }")
+                            .transition(DrawableTransitionOptions.withCrossFade())
+                            .into(ivMovie)
+                        tvTitle.text = it.data?.title?.setDashIfNullOrEmpty()
+                        tvTagLine.text = it.data?.tagline?.setDashIfNullOrEmpty()
+                        tvImbdId.text = it.data?.imdbId?.setDashIfNullOrEmpty()
+                        tvVoteId.text = it.data?.voteAverage.toString().setDashIfNullOrEmpty()
+                        tvOverview.text = it.data?.overview?.setDashIfNullOrEmpty()
+                    }
+                    is Resource.Loading -> {
+                        setLoadingAnimation(isVisible = true)
+                    }
+                    is Resource.Error -> {
+                        setLoadingAnimation(isVisible = false)
+                        showBottomSheet(
+                            isCancelable = false,
+                            isFinish = true
+                        )
                     }
                 }
-                is Resource.Loading -> {
-                    setLoadingFavAnimation(isVisible = true)
-                }
-                is Resource.Error -> {
-                    setLoadingFavAnimation(isVisible = false)
-                }
             }
-        }
 
-        binding.fabFavMovie.setOnClickListener {
-            if(!isFav){
-                viewModel.insertFavMovie(movieID)
-            } else {
-                viewModel.deleteFavMovie(movieID)
+            viewModel.favMovies.observe(this@DetailMovieActivity){
+                when (it) {
+                    is Resource.Success -> {
+                        setLoadingFavAnimation(isVisible = false)
+                        isFav = it.data?.any { it.id == movieID } ?: false
+                        if(isFav){
+                            fabFavMovie.backgroundTintList =
+                                AppCompatResources.getColorStateList(this@DetailMovieActivity, R.color.red_500)
+                        } else {
+                            fabFavMovie.backgroundTintList =
+                                AppCompatResources.getColorStateList(this@DetailMovieActivity, R.color.grey_700)
+                        }
+                    }
+                    is Resource.Loading -> {
+                        setLoadingFavAnimation(isVisible = true)
+                    }
+                    is Resource.Error -> {
+                        setLoadingFavAnimation(isVisible = false)
+                    }
+                }
             }
-            viewModel.getFavMMovies()
+
+            fabFavMovie.setOnClickListener {
+                if(!isFav){
+                    viewModel.insertFavMovie(movieID)
+                } else {
+                    viewModel.deleteFavMovie(movieID)
+                }
+                viewModel.getFavMMovies()
+            }
         }
     }
 
     private fun setLoadingAnimation(isVisible: Boolean){
-        binding.iLoading.root.isVisible = isVisible
-        binding.clContent.isVisible = !isVisible
-        if(isVisible){
-            binding.iLoading.iLoadingFav.fadeInAndOut()
-            binding.iLoading.iLoadingTitle.fadeInAndOut()
-            binding.iLoading.iLoadingTagLine.fadeInAndOut()
-            binding.iLoading.iLoadingImdb.fadeInAndOut()
-            binding.iLoading.iLoadingVote.fadeInAndOut()
-            binding.iLoading.iLoadingDscLabel.fadeInAndOut()
-            binding.iLoading.iLoadingDsc.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoadingFav.stopFadeInAndOut()
-            binding.iLoading.iLoadingTitle.stopFadeInAndOut()
-            binding.iLoading.iLoadingTagLine.stopFadeInAndOut()
-            binding.iLoading.iLoadingImdb.stopFadeInAndOut()
-            binding.iLoading.iLoadingVote.stopFadeInAndOut()
-            binding.iLoading.iLoadingDscLabel.stopFadeInAndOut()
-            binding.iLoading.iLoadingDsc.stopFadeInAndOut()
+        with(binding){
+            iLoading.root.isVisible = isVisible
+            clContent.isVisible = !isVisible
+            if(isVisible){
+                iLoading.iLoadingFav.fadeInAndOut()
+                iLoading.iLoadingTitle.fadeInAndOut()
+                iLoading.iLoadingTagLine.fadeInAndOut()
+                iLoading.iLoadingImdb.fadeInAndOut()
+                iLoading.iLoadingVote.fadeInAndOut()
+                iLoading.iLoadingDscLabel.fadeInAndOut()
+                iLoading.iLoadingDsc.fadeInAndOut()
+            } else {
+                iLoading.iLoadingFav.stopFadeInAndOut()
+                iLoading.iLoadingTitle.stopFadeInAndOut()
+                iLoading.iLoadingTagLine.stopFadeInAndOut()
+                iLoading.iLoadingImdb.stopFadeInAndOut()
+                iLoading.iLoadingVote.stopFadeInAndOut()
+                iLoading.iLoadingDscLabel.stopFadeInAndOut()
+                iLoading.iLoadingDsc.stopFadeInAndOut()
+            }
         }
     }
 
