@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 apply from: '../shared_dependencies.gradle'
@@ -10,7 +11,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.capstone"
+        applicationId "com.programmergabut.movieapp"
         minSdk 19
         targetSdk 31
         versionCode 1
@@ -50,4 +51,7 @@ dependencies {
 
     implementation "com.jakewharton.rxbinding4:rxbinding:$rxbinding_version"
     implementation "com.jakewharton.rxbinding4:rxbinding-appcompat:$rxbinding_version"
+
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }
