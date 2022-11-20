@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.databinding.ActivityMainBinding
+import com.programmergabut.movieapp.feature.notification.NotificationActivity
 import com.programmergabut.movieapp.util.PackageUtil
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,11 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.menu_favorites -> {
                     Intent(this, Class.forName(PackageUtil.FavMovieActivity.reflection)).also {
+                        startActivity(it)
+                    }
+                }
+                R.id.menu_notification -> {
+                    Intent(this, NotificationActivity::class.java).also {
                         startActivity(it)
                     }
                 }

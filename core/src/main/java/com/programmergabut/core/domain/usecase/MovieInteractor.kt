@@ -1,6 +1,10 @@
 package com.programmergabut.core.domain.usecase
 
+import com.programmergabut.core.domain.model.Notification
 import com.programmergabut.core.domain.repository.IMovieRepository
+import io.reactivex.Completable
+import io.reactivex.Flowable
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class MovieInteractor @Inject constructor(private val movieRepository: IMovieRepository): MovieUseCase {
@@ -16,4 +20,6 @@ class MovieInteractor @Inject constructor(private val movieRepository: IMovieRep
     override fun insertFavMovieID(movieID: Int) = movieRepository.insertFavMovieID(movieID)
 
     override fun deleteFavMovieID(movieID: Int) = movieRepository.deleteFavMovieID(movieID)
+
+    override fun getListNotification() = movieRepository.getListNotification()
 }
