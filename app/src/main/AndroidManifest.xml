@@ -15,7 +15,8 @@
         android:theme="@style/Theme.Capstone" >
         <activity
             android:name="com.programmergabut.movieapp.feature.main.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:fitsSystemWindows="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:exported="true"
-            android:name="com.programmergabut.movieapp.feature.notification.NotificationActivity">
+            android:name="com.programmergabut.movieapp.feature.notification.NotificationActivity"
+            android:fitsSystemWindows="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

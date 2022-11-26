@@ -4,31 +4,29 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.di.SubModuleDependencies
-import com.programmergabut.movieapp.util.setDashIfNullOrEmpty
-import com.programmergabut.movieapp.util.showBottomSheet
 import com.programmergabut.core.data.Resource
 import com.programmergabut.core.utils.Constant
+import com.programmergabut.movieapp.base.BaseActivity
+import com.programmergabut.movieapp.util.*
 import com.programmergabut.moviedetail.databinding.ActivityDetailBinding
 import com.programmergabut.moviedetail.di.MovieDetailComponent
 import javax.inject.Inject
-import com.programmergabut.movieapp.util.fadeInAndOut
-import com.programmergabut.movieapp.util.stopFadeInAndOut
 import com.programmergabut.moviedetail.di.DaggerMovieDetailComponent
 import dagger.hilt.android.EntryPointAccessors
 
-class DetailMovieActivity: AppCompatActivity() {
+class DetailMovieActivity: BaseActivity<ActivityDetailBinding>() {
 
     companion object {
         const val MOVIE_ID = "movie_id"
     }
 
-    lateinit var binding: ActivityDetailBinding
     private var component: MovieDetailComponent? = null
     private val movieID by lazy { intent?.getIntExtra(MOVIE_ID, -1) ?: -1 }
     private var isFav: Boolean = false
@@ -38,11 +36,14 @@ class DetailMovieActivity: AppCompatActivity() {
 
     private val viewModel: DetailViewModel by viewModels{ viewModelFactory }
 
+    override fun getViewBinding(): ActivityDetailBinding =
+        ActivityDetailBinding.inflate(layoutInflater)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         getActivityComponent()?.inject(this)
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setTransparentStatusBar<Nothing>(null, false)
+        setStatusBarThemeMode(false)
 
         setListener()
         if(movieID > -1){
@@ -135,34 +136,20 @@ class DetailMovieActivity: AppCompatActivity() {
 
     private fun setLoadingAnimation(isVisible: Boolean){
         with(binding){
-            iLoading.root.isVisible = isVisible
             clContent.isVisible = !isVisible
-            if(isVisible){
-                iLoading.iLoadingFav.fadeInAndOut()
-                iLoading.iLoadingTitle.fadeInAndOut()
-                iLoading.iLoadingTagLine.fadeInAndOut()
-                iLoading.iLoadingImdb.fadeInAndOut()
-                iLoading.iLoadingVote.fadeInAndOut()
-                iLoading.iLoadingDscLabel.fadeInAndOut()
-                iLoading.iLoadingDsc.fadeInAndOut()
-            } else {
-                iLoading.iLoadingFav.stopFadeInAndOut()
-                iLoading.iLoadingTitle.stopFadeInAndOut()
-                iLoading.iLoadingTagLine.stopFadeInAndOut()
-                iLoading.iLoadingImdb.stopFadeInAndOut()
-                iLoading.iLoadingVote.stopFadeInAndOut()
-                iLoading.iLoadingDscLabel.stopFadeInAndOut()
-                iLoading.iLoadingDsc.stopFadeInAndOut()
-            }
+            iLoading.root.isVisible = isVisible
+            showFadeLoading(iLoading.iLoadingFav, null, isVisible)
+            showFadeLoading(iLoading.iLoadingTitle, null, isVisible)
+            showFadeLoading(iLoading.iLoadingTagLine, null, isVisible)
+            showFadeLoading(iLoading.iLoadingImdb, null, isVisible)
+            showFadeLoading(iLoading.iLoadingVote, null, isVisible)
+            showFadeLoading(iLoading.iLoadingDscLabel, null, isVisible)
+            showFadeLoading(iLoading.iLoadingDsc, null, isVisible)
         }
     }
 
     private fun setLoadingFavAnimation(isVisible: Boolean){
-        if(isVisible){
-            binding.iLoading.iLoadingFav.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoadingFav.stopFadeInAndOut()
-        }
+        showFadeLoading(binding.iLoading.iLoadingFav, null, isVisible)
     }
 
 }

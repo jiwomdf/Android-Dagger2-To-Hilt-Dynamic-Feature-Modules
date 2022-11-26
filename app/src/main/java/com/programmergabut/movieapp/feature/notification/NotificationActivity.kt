@@ -4,36 +4,39 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.programmergabut.core.data.Resource
 import com.programmergabut.core.domain.model.Notification
+import com.programmergabut.movieapp.R
+import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.databinding.ActivityNotificationBinding
 import com.programmergabut.movieapp.databinding.ListNotificationBinding
-import com.programmergabut.movieapp.util.PackageUtil
-import com.programmergabut.movieapp.util.fadeInAndOut
-import com.programmergabut.movieapp.util.stopFadeInAndOut
+import com.programmergabut.movieapp.util.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class NotificationActivity: AppCompatActivity() {
+class NotificationActivity: BaseActivity<ActivityNotificationBinding>() {
 
-    private lateinit var binding: ActivityNotificationBinding
     private lateinit var notificationAdapter: NotificationAdapter
 
     val viewModel: NotificationViewModel by viewModels()
 
+    override fun getViewBinding(): ActivityNotificationBinding =
+        ActivityNotificationBinding.inflate(layoutInflater)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityNotificationBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         setupAdapter()
         setListener()
+        setTransparentStatusBar<RelativeLayout>(binding.root)
         viewModel.getListNotification()
     }
 
@@ -72,55 +75,26 @@ class NotificationActivity: AppCompatActivity() {
         binding.iLoading.root.isVisible = isVisible
         binding.rvNotification.isVisible = !isVisible
         with(binding.iLoading){
-            if(isVisible){
-                clTitle1.root.fadeInAndOut()
-                tvDesc1.root.fadeInAndOut()
-                ivIcon1.root.fadeInAndOut()
-                llInfo1.root.fadeInAndOut()
-                vDivider1.root.fadeInAndOut()
+            showFadeLoading(clTitle1.root, null, isVisible)
+            showFadeLoading(tvDesc1.root, null, isVisible)
+            showFadeLoading(ivIcon1.root, null, isVisible)
+            showFadeLoading(llInfo1.root, null, isVisible)
+            showFadeLoading(vDivider1.root, null, isVisible)
 
-                clTitle2.root.fadeInAndOut()
-                tvDesc2.root.fadeInAndOut()
-                ivIcon2.root.fadeInAndOut()
-                llInfo2.root.fadeInAndOut()
-                vDivider2.root.fadeInAndOut()
+            showFadeLoading(tvDesc2.root, null, isVisible)
+            showFadeLoading(ivIcon2.root, null, isVisible)
+            showFadeLoading(llInfo2.root, null, isVisible)
+            showFadeLoading(vDivider2.root, null, isVisible)
 
-                clTitle3.root.fadeInAndOut()
-                tvDesc3.root.fadeInAndOut()
-                ivIcon3.root.fadeInAndOut()
-                llInfo3.root.fadeInAndOut()
-                vDivider3.root.fadeInAndOut()
+            showFadeLoading(tvDesc3.root, null, isVisible)
+            showFadeLoading(ivIcon3.root, null, isVisible)
+            showFadeLoading(llInfo3.root, null, isVisible)
+            showFadeLoading(vDivider3.root, null, isVisible)
 
-                clTitle4.root.fadeInAndOut()
-                tvDesc4.root.fadeInAndOut()
-                ivIcon4.root.fadeInAndOut()
-                llInfo4.root.fadeInAndOut()
-                vDivider4.root.fadeInAndOut()
-            } else {
-                clTitle1.root.stopFadeInAndOut()
-                tvDesc1.root.stopFadeInAndOut()
-                ivIcon1.root.stopFadeInAndOut()
-                llInfo1.root.stopFadeInAndOut()
-                vDivider1.root.stopFadeInAndOut()
-
-                clTitle2.root.stopFadeInAndOut()
-                tvDesc2.root.stopFadeInAndOut()
-                ivIcon2.root.stopFadeInAndOut()
-                llInfo2.root.stopFadeInAndOut()
-                vDivider2.root.stopFadeInAndOut()
-
-                clTitle3.root.stopFadeInAndOut()
-                tvDesc3.root.stopFadeInAndOut()
-                ivIcon3.root.stopFadeInAndOut()
-                llInfo3.root.stopFadeInAndOut()
-                vDivider3.root.stopFadeInAndOut()
-
-                clTitle4.root.stopFadeInAndOut()
-                tvDesc4.root.stopFadeInAndOut()
-                ivIcon4.root.stopFadeInAndOut()
-                llInfo4.root.stopFadeInAndOut()
-                vDivider4.root.stopFadeInAndOut()
-            }
+            showFadeLoading(tvDesc4.root, null, isVisible)
+            showFadeLoading(ivIcon4.root, null, isVisible)
+            showFadeLoading(llInfo4.root, null, isVisible)
+            showFadeLoading(vDivider4.root, null, isVisible)
         }
     }
 

@@ -3,6 +3,7 @@ package com.programmergabut.core.di
 import android.content.Context
 import android.content.SharedPreferences
 import com.programmergabut.core.R
+import com.programmergabut.core.domain.prefs.Prefs
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,5 +19,5 @@ class SharedPrefModule {
     @Provides
     fun provideSharedPref(
         @ApplicationContext context: Context
-    ): SharedPreferences = context.getSharedPreferences(context.getString(R.string.shared_pref_tmdb), Context.MODE_PRIVATE)
+    ): Prefs = Prefs(context)
 }

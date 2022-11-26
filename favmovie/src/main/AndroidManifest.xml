@@ -26,7 +26,8 @@
         android:theme="@style/Theme.Capstone" >
         <activity
             android:name=".feature.favmovie.FavMovieActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:fitsSystemWindows="true"/>
     </application>
 
 </manifest>

@@ -3,33 +3,37 @@ package com.programmergabut.favmovie.feature.favmovie
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.programmergabut.movieapp.feature.main.MovieAdapter
-import com.programmergabut.movieapp.util.PackageUtil
 import com.programmergabut.core.data.Resource
 import com.programmergabut.favmovie.databinding.ActivityFavMovieBinding
 import com.programmergabut.favmovie.di.FavMovieComponent
-import com.programmergabut.movieapp.util.fadeInAndOut
-import com.programmergabut.movieapp.util.stopFadeInAndOut
 import com.programmergabut.favmovie.di.DaggerFavMovieComponent
+import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.di.SubModuleDependencies
+import com.programmergabut.movieapp.util.*
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
 
-class FavMovieActivity : AppCompatActivity() {
+class FavMovieActivity : BaseActivity<ActivityFavMovieBinding>() {
 
 
     private lateinit var movieAdapter: MovieAdapter
-    private lateinit var binding: ActivityFavMovieBinding
     private var component: FavMovieComponent? = null
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     val viewModel: FavMovieViewModel by viewModels { viewModelFactory }
+
+    override fun getViewBinding(): ActivityFavMovieBinding =
+        ActivityFavMovieBinding.inflate(layoutInflater)
 
     override fun onStart() {
         super.onStart()
@@ -39,8 +43,7 @@ class FavMovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         getActivityComponent()?.inject(this)
         super.onCreate(savedInstanceState)
-        binding = ActivityFavMovieBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setTransparentStatusBar<LinearLayout>(binding.root)
         setAdapter()
         setListener()
     }
@@ -99,21 +102,12 @@ class FavMovieActivity : AppCompatActivity() {
         with(binding){
             iLoading.root.isVisible = isVisible
             rvMovies.isVisible = !isVisible
-            if(isVisible){
-                iLoading.iLoading1.fadeInAndOut()
-                iLoading.iLoading2.fadeInAndOut()
-                iLoading.iLoading3.fadeInAndOut()
-                iLoading.iLoading4.fadeInAndOut()
-                iLoading.iLoading5.fadeInAndOut()
-                iLoading.iLoading6.fadeInAndOut()
-            } else {
-                iLoading.iLoading1.stopFadeInAndOut()
-                iLoading.iLoading2.stopFadeInAndOut()
-                iLoading.iLoading3.stopFadeInAndOut()
-                iLoading.iLoading4.stopFadeInAndOut()
-                iLoading.iLoading5.stopFadeInAndOut()
-                iLoading.iLoading6.stopFadeInAndOut()
-            }
+            showFadeLoading(iLoading.iLoading1, null, isVisible)
+            showFadeLoading(iLoading.iLoading2, null, isVisible)
+            showFadeLoading(iLoading.iLoading3, null, isVisible)
+            showFadeLoading(iLoading.iLoading4, null, isVisible)
+            showFadeLoading(iLoading.iLoading5, null, isVisible)
+            showFadeLoading(iLoading.iLoading6, null, isVisible)
         }
     }
 
