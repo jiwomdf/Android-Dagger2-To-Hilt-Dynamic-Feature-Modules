@@ -8,12 +8,6 @@
         android:title="@string/favorite"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/menu_notification"
-        android:enabled="true"
-        android:icon="@drawable/menu_notification_24"
-        android:title="@string/notification"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/menu_theme"
         android:enabled="true"
         android:icon="@drawable/ic_dark_theme"

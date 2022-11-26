@@ -38,11 +38,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                         startActivity(it)
                     }
                 }
-                R.id.menu_notification -> {
-                    Intent(this, NotificationActivity::class.java).also {
-                        startActivity(it)
-                    }
-                }
                 R.id.menu_theme -> {
                     if(prefs.isDarkThemeMode){
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
