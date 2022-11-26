@@ -16,13 +16,15 @@ import com.programmergabut.movieapp.util.fadeInAndOut
 import com.programmergabut.movieapp.util.stopFadeInAndOut
 import com.programmergabut.core.data.Resource
 import com.jakewharton.rxbinding4.widget.textChangeEvents
+import com.programmergabut.movieapp.base.BaseFragment
+import com.programmergabut.movieapp.util.showFadeLoading
 import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 @AndroidEntryPoint
-class HomeFragment: Fragment() {
+class HomeFragment: BaseFragment<FragmentHomeBinding>() {
 
     companion object {
         fun newInstance(): HomeFragment {
@@ -34,9 +36,13 @@ class HomeFragment: Fragment() {
     }
 
     lateinit var movieAdapter: MovieAdapter
-    lateinit var binding: FragmentHomeBinding
 
     val viewModel: MainViewModel by viewModels()
+
+    override fun getViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -104,24 +110,16 @@ class HomeFragment: Fragment() {
     }
 
     private fun setLoadingAnimation(isVisible: Boolean){
-        binding.iLoading.root.isVisible = isVisible
-        binding.rvMovies.isVisible = !isVisible
-        if(isVisible){
-            binding.iLoading.iLoading1.root.fadeInAndOut()
-            binding.iLoading.iLoading2.root.fadeInAndOut()
-            binding.iLoading.iLoading3.root.fadeInAndOut()
-            binding.iLoading.iLoading4.root.fadeInAndOut()
-            binding.iLoading.iLoading5.root.fadeInAndOut()
-            binding.iLoading.iLoading6.root.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoading1.root.stopFadeInAndOut()
-            binding.iLoading.iLoading2.root.stopFadeInAndOut()
-            binding.iLoading.iLoading3.root.stopFadeInAndOut()
-            binding.iLoading.iLoading4.root.stopFadeInAndOut()
-            binding.iLoading.iLoading5.root.stopFadeInAndOut()
-            binding.iLoading.iLoading6.root.stopFadeInAndOut()
+        with(binding){
+            iLoading.root.isVisible = isVisible
+            rvMovies.isVisible = !isVisible
+            showFadeLoading(iLoading.iLoading1.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading2.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading3.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading4.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading5.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading6.root, null, isVisible)
         }
     }
-
 
 }

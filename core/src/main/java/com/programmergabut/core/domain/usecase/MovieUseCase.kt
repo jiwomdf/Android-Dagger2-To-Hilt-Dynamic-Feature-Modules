@@ -3,6 +3,7 @@ package com.programmergabut.core.domain.usecase
 import com.programmergabut.core.data.Resource
 import com.programmergabut.core.domain.model.MovieDetail
 import com.programmergabut.core.domain.model.Movie
+import com.programmergabut.core.domain.model.Notification
 import io.reactivex.Flowable
 
 
@@ -13,4 +14,5 @@ interface MovieUseCase {
     fun getFavMovies(): Flowable<Resource<List<Movie>>>
     fun insertFavMovieID(movieID: Int)
     fun deleteFavMovieID(movieID: Int)
+    fun getListNotification(): Flowable<List<Notification>>
 }

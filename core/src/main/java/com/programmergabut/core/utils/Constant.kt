@@ -7,6 +7,7 @@ object Constant {
     const val BASE_URL = "https://api.themoviedb.org/"
 
     const val IMAGE_URL_PREFIX_200 = "https://image.tmdb.org/t/p/w200"
+    const val IMAGE_URL_PREFIX_300 = "https://image.tmdb.org/t/p/w300"
     const val IMAGE_URL_PREFIX_500 = "https://image.tmdb.org/t/p/w500"
 
 

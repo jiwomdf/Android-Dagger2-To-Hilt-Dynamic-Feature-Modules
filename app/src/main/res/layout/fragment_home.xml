@@ -16,16 +16,29 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
-            <EditText
-                android:id="@+id/et_search_movies"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:drawableStart="@drawable/ic_search_24"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_search_movies"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"/>
+                android:layout_height="wrap_content"
+                app:expandedHintEnabled="false"
+                app:placeholderText="@string/search_movie_here"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_search_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableStart="@drawable/ic_search_24"
+                    android:drawablePadding="4dp"
+                    android:lines="1">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <include
                 android:id="@+id/i_loading"
@@ -34,16 +47,17 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_search_movies" />
+                app:layout_constraintTop_toBottomOf="@+id/til_search_movies" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_movies"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_search_movies"
+                app:layout_constraintTop_toBottomOf="@+id/til_search_movies"
                 app:spanCount="2"
                 tools:itemCount="8"
                 tools:listitem="@layout/list_movie_item" />

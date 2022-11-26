@@ -2,24 +2,28 @@ package com.programmergabut.movieapp.feature.main
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.programmergabut.movieapp.R
+import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.databinding.ActivityMainBinding
+import com.programmergabut.movieapp.feature.notification.NotificationActivity
 import com.programmergabut.movieapp.util.PackageUtil
+import com.programmergabut.movieapp.util.setTransparentStatusBar
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+@AndroidEntryPoint
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    override fun getViewBinding(): ActivityMainBinding =
+        ActivityMainBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         setListener()
         loadFragment(HomeFragment.newInstance())
+        setTransparentStatusBar(binding.root)
     }
 
     fun setTitle(title: String) {
@@ -34,6 +38,19 @@ class MainActivity : AppCompatActivity() {
                         startActivity(it)
                     }
                 }
+                R.id.menu_notification -> {
+                    Intent(this, NotificationActivity::class.java).also {
+                        startActivity(it)
+                    }
+                }
+                R.id.menu_theme -> {
+                    if(prefs.isDarkThemeMode){
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    } else {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    }
+                    prefs.isDarkThemeMode = !prefs.isDarkThemeMode
+                }
                 else -> {}
             }
             false
@@ -42,12 +59,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-//        transaction.setCustomAnimations(
-//            R.anim.fragment_fade_enter,
-//            R.anim.fragment_fade_exit,
-//            R.anim.fragment_fade_enter,
-//            R.anim.fragment_fade_exit
-//        )
+        transaction.setCustomAnimations(
+            android.R.anim.fade_in,
+            android.R.anim.fade_out,
+            android.R.anim.fade_in,
+            android.R.anim.fade_out
+        )
         transaction.replace(R.id.fcv_main, fragment, fragment.javaClass.toString())
         transaction.commit()
     }

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/cl_item_notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <include
+            android:id="@+id/iv_icon_1"
+            layout="@layout/layout_loading_card"
+            android:layout_marginStart="16dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="@id/ll_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ll_info_1"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_1"
+            app:layout_constraintBottom_toTopOf="@id/v_divider_1">
+
+            <include
+                android:id="@+id/cl_title_1"
+                layout="@layout/layout_loading_card"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <include
+                android:id="@+id/tv_desc_1"
+                layout="@layout/layout_loading_card"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ll_info_1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            layout="@layout/layout_loading_card"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content" />
+
+        <include
+            android:id="@+id/v_divider_1"
+            android:layout_width="match_parent"
+            layout="@layout/layout_loading_card"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <include
+            android:id="@+id/iv_icon_2"
+            layout="@layout/layout_loading_card"
+            android:layout_marginStart="16dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="@id/ll_content_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content_2" />
+
+        <LinearLayout
+            android:id="@+id/ll_content_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ll_info_2"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_2"
+            app:layout_constraintBottom_toTopOf="@id/v_divider_2">
+
+            <include
+                android:id="@+id/cl_title_2"
+                layout="@layout/layout_loading_card"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <include
+                android:id="@+id/tv_desc_2"
+                layout="@layout/layout_loading_card"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ll_info_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            layout="@layout/layout_loading_card"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content_2" />
+
+        <include
+            android:id="@+id/v_divider_2"
+            android:layout_width="match_parent"
+            layout="@layout/layout_loading_card"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <include
+            android:id="@+id/iv_icon_3"
+            layout="@layout/layout_loading_card"
+            android:layout_marginStart="16dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="@id/ll_content_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content_3" />
+
+        <LinearLayout
+            android:id="@+id/ll_content_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ll_info_3"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_3"
+            app:layout_constraintBottom_toTopOf="@id/v_divider_3">
+
+            <include
+                android:id="@+id/cl_title_3"
+                layout="@layout/layout_loading_card"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <include
+                android:id="@+id/tv_desc_3"
+                layout="@layout/layout_loading_card"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ll_info_3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            layout="@layout/layout_loading_card"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content_3" />
+
+        <include
+            android:id="@+id/v_divider_3"
+            android:layout_width="match_parent"
+            layout="@layout/layout_loading_card"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <include
+            android:id="@+id/iv_icon_4"
+            layout="@layout/layout_loading_card"
+            android:layout_marginStart="16dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="@id/ll_content_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content_4" />
+
+        <LinearLayout
+            android:id="@+id/ll_content_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ll_info_4"
+            app:layout_constraintStart_toEndOf="@id/iv_icon_4"
+            app:layout_constraintBottom_toTopOf="@id/v_divider_4">
+
+            <include
+                android:id="@+id/cl_title_4"
+                layout="@layout/layout_loading_card"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <include
+                android:id="@+id/tv_desc_4"
+                layout="@layout/layout_loading_card"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ll_info_4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            layout="@layout/layout_loading_card"
+            android:orientation="vertical"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_content_4" />
+
+        <include
+            android:id="@+id/v_divider_4"
+            android:layout_width="match_parent"
+            layout="@layout/layout_loading_card"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

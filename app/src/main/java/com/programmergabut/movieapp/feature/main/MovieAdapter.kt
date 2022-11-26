@@ -10,6 +10,8 @@ import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.databinding.ListMovieItemBinding
 import com.programmergabut.core.domain.model.Movie
 import com.programmergabut.core.utils.Constant.IMAGE_URL_PREFIX_200
+import com.programmergabut.core.utils.Constant.IMAGE_URL_PREFIX_300
+import com.programmergabut.core.utils.Constant.IMAGE_URL_PREFIX_500
 import com.programmergabut.movieapp.util.takeCaption
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
@@ -33,7 +35,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
         fun bind(data: Movie){
 
             Glide.with(context)
-                .load("$IMAGE_URL_PREFIX_200${data.backdropPath}")
+                .load("$IMAGE_URL_PREFIX_300${data.posterPath}")
                 .error(R.drawable.ic_broken_image_24)
                 .centerInside()
                 .transition(DrawableTransitionOptions.withCrossFade())

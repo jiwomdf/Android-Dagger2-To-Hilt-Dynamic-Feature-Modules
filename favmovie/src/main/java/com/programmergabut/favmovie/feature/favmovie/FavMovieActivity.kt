@@ -4,32 +4,32 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.programmergabut.movieapp.feature.main.MovieAdapter
-import com.programmergabut.movieapp.util.PackageUtil
 import com.programmergabut.core.data.Resource
 import com.programmergabut.favmovie.databinding.ActivityFavMovieBinding
 import com.programmergabut.favmovie.di.FavMovieComponent
-import com.programmergabut.movieapp.util.fadeInAndOut
-import com.programmergabut.movieapp.util.stopFadeInAndOut
 import com.programmergabut.favmovie.di.DaggerFavMovieComponent
+import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.di.SubModuleDependencies
+import com.programmergabut.movieapp.util.*
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
 
-class FavMovieActivity : AppCompatActivity() {
+class FavMovieActivity : BaseActivity<ActivityFavMovieBinding>() {
 
 
     private lateinit var movieAdapter: MovieAdapter
-    private lateinit var binding: ActivityFavMovieBinding
     private var component: FavMovieComponent? = null
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     val viewModel: FavMovieViewModel by viewModels { viewModelFactory }
+
+    override fun getViewBinding(): ActivityFavMovieBinding =
+        ActivityFavMovieBinding.inflate(layoutInflater)
 
     override fun onStart() {
         super.onStart()
@@ -39,8 +39,7 @@ class FavMovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         getActivityComponent()?.inject(this)
         super.onCreate(savedInstanceState)
-        binding = ActivityFavMovieBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setTransparentStatusBar(binding.root)
         setAdapter()
         setListener()
     }
@@ -96,22 +95,15 @@ class FavMovieActivity : AppCompatActivity() {
     }
 
     private fun setLoadingAnimation(isVisible: Boolean){
-        binding.iLoading.root.isVisible = isVisible
-        binding.rvMovies.isVisible = !isVisible
-        if(isVisible){
-            binding.iLoading.iLoading1.fadeInAndOut()
-            binding.iLoading.iLoading2.fadeInAndOut()
-            binding.iLoading.iLoading3.fadeInAndOut()
-            binding.iLoading.iLoading4.fadeInAndOut()
-            binding.iLoading.iLoading5.fadeInAndOut()
-            binding.iLoading.iLoading6.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoading1.stopFadeInAndOut()
-            binding.iLoading.iLoading2.stopFadeInAndOut()
-            binding.iLoading.iLoading3.stopFadeInAndOut()
-            binding.iLoading.iLoading4.stopFadeInAndOut()
-            binding.iLoading.iLoading5.stopFadeInAndOut()
-            binding.iLoading.iLoading6.stopFadeInAndOut()
+        with(binding){
+            iLoading.root.isVisible = isVisible
+            rvMovies.isVisible = !isVisible
+            showFadeLoading(iLoading.iLoading1, null, isVisible)
+            showFadeLoading(iLoading.iLoading2, null, isVisible)
+            showFadeLoading(iLoading.iLoading3, null, isVisible)
+            showFadeLoading(iLoading.iLoading4, null, isVisible)
+            showFadeLoading(iLoading.iLoading5, null, isVisible)
+            showFadeLoading(iLoading.iLoading6, null, isVisible)
         }
     }
 
