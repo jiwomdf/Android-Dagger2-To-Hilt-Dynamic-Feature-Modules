@@ -35,7 +35,7 @@
                 android:id="@+id/fab_fav_movie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_stars_24"
+                android:src="@drawable/ic_stars_detail"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toTopOf="@id/cl_detail"
                 app:layout_constraintEnd_toEndOf="@id/cl_detail"

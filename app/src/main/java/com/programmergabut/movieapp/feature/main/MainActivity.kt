@@ -1,23 +1,14 @@
 package com.programmergabut.movieapp.feature.main
 
 import android.content.Intent
-import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
-import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContextCompat
-import androidx.core.graphics.BlendModeColorFilterCompat
-import androidx.core.graphics.BlendModeCompat
 import androidx.fragment.app.Fragment
 import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.databinding.ActivityMainBinding
 import com.programmergabut.movieapp.feature.notification.NotificationActivity
 import com.programmergabut.movieapp.util.PackageUtil
-import com.programmergabut.movieapp.util.setStatusBarThemeMode
 import com.programmergabut.movieapp.util.setTransparentStatusBar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,7 +23,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
         setListener()
         loadFragment(HomeFragment.newInstance())
-        setTransparentStatusBar<LinearLayout>(binding.root)
+        setTransparentStatusBar(binding.root)
     }
 
     fun setTitle(title: String) {

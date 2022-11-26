@@ -38,7 +38,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\User\Downloads\ic_stars.png" />
-                                                <entry key="opacityPercent" value="60" />
+                                                <entry key="opacityPercent" value="80" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -72,7 +72,9 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="imageAsset" value="C:\Users\User\Downloads\ic_stars.png" />
-                                      <entry key="outputName" value="ic_stars_24" />
+                                      <entry key="outputName" value="ic_star_24" />
+                                      <entry key="theme" value="CUSTOM" />
+                                      <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -325,7 +327,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/Android/SDK/icons/material/materialicons/brightness_medium/baseline_brightness_medium_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/Android/SDK/icons/material/materialicons/star/baseline_star_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -335,8 +337,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_search_25" />
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_starts_detail" />
                             <entry key="sourceFile" value="C:\Users\User\Downloads\search-01.svg" />
                           </map>
                         </option>

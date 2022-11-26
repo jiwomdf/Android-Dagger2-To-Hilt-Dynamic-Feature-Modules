@@ -91,7 +91,7 @@ fun Fragment.setStatusBarThemeMode(isDarkMode: Boolean){
     }
 }
 
-fun <T: View>Activity.setTransparentStatusBar(view: View? = null, isMarginTop: Boolean = true){
+fun Activity.setTransparentStatusBar(view: View? = null, isMarginTop: Boolean = true){
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
         window.setFlags(FLAG_TRANSLUCENT_STATUS, FLAG_TRANSLUCENT_STATUS)
         if (isMarginTop) {

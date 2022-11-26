@@ -3,13 +3,9 @@ package com.programmergabut.favmovie.feature.favmovie
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.programmergabut.movieapp.feature.main.MovieAdapter
 import com.programmergabut.core.data.Resource
 import com.programmergabut.favmovie.databinding.ActivityFavMovieBinding
@@ -43,7 +39,7 @@ class FavMovieActivity : BaseActivity<ActivityFavMovieBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         getActivityComponent()?.inject(this)
         super.onCreate(savedInstanceState)
-        setTransparentStatusBar<LinearLayout>(binding.root)
+        setTransparentStatusBar(binding.root)
         setAdapter()
         setListener()
     }

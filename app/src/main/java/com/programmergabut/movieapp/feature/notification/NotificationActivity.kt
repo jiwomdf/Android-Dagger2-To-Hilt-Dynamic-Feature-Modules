@@ -1,21 +1,15 @@
 package com.programmergabut.movieapp.feature.notification
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.programmergabut.core.data.Resource
 import com.programmergabut.core.domain.model.Notification
-import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.databinding.ActivityNotificationBinding
 import com.programmergabut.movieapp.databinding.ListNotificationBinding
@@ -36,7 +30,7 @@ class NotificationActivity: BaseActivity<ActivityNotificationBinding>() {
         super.onCreate(savedInstanceState)
         setupAdapter()
         setListener()
-        setTransparentStatusBar<RelativeLayout>(binding.root)
+        setTransparentStatusBar(binding.root)
         viewModel.getListNotification()
     }
 

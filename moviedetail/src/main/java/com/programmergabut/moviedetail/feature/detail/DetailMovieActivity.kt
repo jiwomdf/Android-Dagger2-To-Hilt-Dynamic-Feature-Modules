@@ -2,9 +2,7 @@ package com.programmergabut.moviedetail.feature.detail
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
@@ -42,7 +40,7 @@ class DetailMovieActivity: BaseActivity<ActivityDetailBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         getActivityComponent()?.inject(this)
         super.onCreate(savedInstanceState)
-        setTransparentStatusBar<Nothing>(null, false)
+        setTransparentStatusBar(null, false)
         setStatusBarThemeMode(false)
 
         setListener()
