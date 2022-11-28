@@ -11,8 +11,9 @@ Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
 
 <br>
 
-![](https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Dagger%202%20to%20Hilt%20In%20Multi%20Module%20App%2Foneone.jpg?alt=media&token=38719daa-4bf2-4fe2-9cf1-f224ca662f50)
-![](https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Dagger%202%20to%20Hilt%20In%20Multi%20Module%20App%2Fthreetwo.jpg?alt=media&token=e64e4adc-d7c1-492b-bfaf-026194fa9ab4)
+![](https://firebasestorage.googleapis.com/v0/b/movie-app-e25f5.appspot.com/o/b.jpg?alt=media&token=e121f6c8-4985-4a4b-9695-19c053b233c5)
+![](https://firebasestorage.googleapis.com/v0/b/movie-app-e25f5.appspot.com/o/bf.jpg?alt=media&token=44910d0a-c473-4968-951a-2b300e4153e1)
+![](https://firebasestorage.googleapis.com/v0/b/movie-app-e25f5.appspot.com/o/w.jpg?alt=media&token=21021613-f006-4d39-9615-50ddcbbae6bb)
 ## Project Stack
 1. Dagger 2 / Hilt
 2. RxJava
