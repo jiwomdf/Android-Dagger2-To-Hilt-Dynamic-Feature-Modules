@@ -10,7 +10,7 @@
         android:id="@+id/i_loading_image"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:orientation="vertical" />
 
     <include

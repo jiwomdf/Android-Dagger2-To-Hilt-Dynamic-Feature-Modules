@@ -3,6 +3,7 @@ package com.programmergabut.movieapp.di
 import com.programmergabut.movieapp.feature.main.HomeFragment
 import com.programmergabut.movieapp.feature.main.MainActivity
 import com.programmergabut.core.di.CoreComponent
+import com.programmergabut.core.di.SharedPrefModule
 import dagger.Component
 
 @AppScope

@@ -9,13 +9,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.programmergabut.movieapp.App
 import com.programmergabut.movieapp.R
-import com.programmergabut.movieapp.util.fadeInAndOut
-import com.programmergabut.movieapp.util.setDashIfNullOrEmpty
-import com.programmergabut.movieapp.util.showBottomSheet
-import com.programmergabut.movieapp.util.stopFadeInAndOut
 import com.programmergabut.core.data.Resource
 import com.programmergabut.core.factory.ViewModelFactory
 import com.programmergabut.core.utils.Constant
+import com.programmergabut.movieapp.util.*
 import com.programmergabut.moviedetail.databinding.ActivityDetailBinding
 import com.programmergabut.moviedetail.di.DaggerMovieDetailComponent
 import com.programmergabut.moviedetail.di.MovieDetailComponent
@@ -42,6 +39,7 @@ class DetailMovieActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setTransparentStatusBar(null, false)
 
         setListener()
         if(movieID > -1){

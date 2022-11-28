@@ -1,6 +1,7 @@
 package com.programmergabut.core.di
 
 import android.content.Context
+import com.programmergabut.core.domain.prefs.Prefs
 import com.programmergabut.core.domain.repository.IMovieRepository
 import dagger.BindsInstance
 import dagger.Component
@@ -18,5 +19,6 @@ interface CoreComponent {
     }
 
     fun provideRepository() : IMovieRepository
+    fun providePrefs() : Prefs
 
 }

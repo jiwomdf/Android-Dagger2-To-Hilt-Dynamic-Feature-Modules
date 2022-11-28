@@ -2,7 +2,6 @@
   <library name="Gradle: io.reactivex.rxjava3:rxandroid:3.0.0@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/79383249abccfc21e3b98fe6aff7d104/transformed/jetified-rxandroid-3.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79383249abccfc21e3b98fe6aff7d104/transformed/jetified-rxandroid-3.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/79383249abccfc21e3b98fe6aff7d104/transformed/jetified-rxandroid-3.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

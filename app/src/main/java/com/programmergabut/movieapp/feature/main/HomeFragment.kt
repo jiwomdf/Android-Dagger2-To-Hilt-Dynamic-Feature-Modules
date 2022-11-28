@@ -18,12 +18,14 @@ import com.programmergabut.movieapp.util.stopFadeInAndOut
 import com.programmergabut.core.data.Resource
 import com.programmergabut.core.factory.ViewModelFactory
 import com.jakewharton.rxbinding4.widget.textChangeEvents
+import com.programmergabut.movieapp.base.BaseFragment
+import com.programmergabut.movieapp.util.showFadeLoading
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-class HomeFragment: Fragment() {
+class HomeFragment: BaseFragment<FragmentHomeBinding>() {
 
     companion object {
         fun newInstance(): HomeFragment {
@@ -37,8 +39,6 @@ class HomeFragment: Fragment() {
     @Inject
     lateinit var factory: ViewModelFactory
     lateinit var movieAdapter: MovieAdapter
-    lateinit var binding: FragmentHomeBinding
-
     private val viewModel: MainViewModel by viewModels { factory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,15 +46,10 @@ class HomeFragment: Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(
+    override fun getViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
-        setListener()
-        return binding.root
-    }
+        container: ViewGroup?
+    ): FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -112,24 +107,18 @@ class HomeFragment: Fragment() {
     }
 
     private fun setLoadingAnimation(isVisible: Boolean){
-        binding.iLoading.root.isVisible = isVisible
-        binding.rvMovies.isVisible = !isVisible
-        if(isVisible){
-            binding.iLoading.iLoading1.root.fadeInAndOut()
-            binding.iLoading.iLoading2.root.fadeInAndOut()
-            binding.iLoading.iLoading3.root.fadeInAndOut()
-            binding.iLoading.iLoading4.root.fadeInAndOut()
-            binding.iLoading.iLoading5.root.fadeInAndOut()
-            binding.iLoading.iLoading6.root.fadeInAndOut()
-        } else {
-            binding.iLoading.iLoading1.root.stopFadeInAndOut()
-            binding.iLoading.iLoading2.root.stopFadeInAndOut()
-            binding.iLoading.iLoading3.root.stopFadeInAndOut()
-            binding.iLoading.iLoading4.root.stopFadeInAndOut()
-            binding.iLoading.iLoading5.root.stopFadeInAndOut()
-            binding.iLoading.iLoading6.root.stopFadeInAndOut()
+        with(binding){
+            iLoading.root.isVisible = isVisible
+            rvMovies.isVisible = !isVisible
+            showFadeLoading(iLoading.iLoading1.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading2.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading3.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading4.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading5.root, null, isVisible)
+            showFadeLoading(iLoading.iLoading6.root, null, isVisible)
         }
     }
+
 
 
 }

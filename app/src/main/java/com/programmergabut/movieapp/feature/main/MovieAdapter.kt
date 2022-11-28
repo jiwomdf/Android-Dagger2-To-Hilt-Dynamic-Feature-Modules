@@ -10,6 +10,7 @@ import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.databinding.ListMovieItemBinding
 import com.programmergabut.core.domain.model.Movie
 import com.programmergabut.core.utils.Constant.IMAGE_URL_PREFIX_200
+import com.programmergabut.core.utils.Constant.IMAGE_URL_PREFIX_500
 import com.programmergabut.movieapp.util.takeCaption
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
@@ -31,18 +32,19 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                                 private val binding: ListMovieItemBinding
                                 ): RecyclerView.ViewHolder(binding.root){
         fun bind(data: Movie){
+            with(binding){
+                Glide.with(context)
+                    .load("$IMAGE_URL_PREFIX_500${data.posterPath}")
+                    .error(R.drawable.ic_broken_image_24)
+                    .centerInside()
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .into(ivMovie)
 
-            Glide.with(context)
-                .load("$IMAGE_URL_PREFIX_200${data.backdropPath}")
-                .error(R.drawable.ic_broken_image_24)
-                .centerInside()
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(binding.ivMovie)
-
-            binding.tvMovie.text = data.title
-            binding.tvMovieShort.text = data.overview.takeCaption()
-            binding.root.setOnClickListener {
-                onClick?.invoke(data)
+                tvMovie.text = data.title
+                tvMovieShort.text = data.overview.takeCaption()
+                root.setOnClickListener {
+                    onClick?.invoke(data)
+                }
             }
         }
 

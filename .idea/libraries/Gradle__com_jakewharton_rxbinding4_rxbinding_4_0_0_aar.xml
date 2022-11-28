@@ -2,7 +2,6 @@
   <library name="Gradle: com.jakewharton.rxbinding4:rxbinding:4.0.0@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8c249fe122dc39a509ab02059cede3f1/transformed/jetified-rxbinding-4.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8c249fe122dc39a509ab02059cede3f1/transformed/jetified-rxbinding-4.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8c249fe122dc39a509ab02059cede3f1/transformed/jetified-rxbinding-4.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

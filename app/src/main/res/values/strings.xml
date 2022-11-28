@@ -5,6 +5,8 @@
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
     <string name="oke">Oke</string>
+    <string name="notification">Notification</string>
+    <string name="search_movie_here">Search movie here…</string>
 
     <!-- Bottom Sheet Error -->
     <string name="text_error_title">Error Occurred</string>

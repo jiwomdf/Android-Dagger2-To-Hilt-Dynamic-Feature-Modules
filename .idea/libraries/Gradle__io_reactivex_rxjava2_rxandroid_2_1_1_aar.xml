@@ -2,7 +2,6 @@
   <library name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7b7737072cec70085b7142269762dcd6/transformed/jetified-rxandroid-2.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7b7737072cec70085b7142269762dcd6/transformed/jetified-rxandroid-2.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7b7737072cec70085b7142269762dcd6/transformed/jetified-rxandroid-2.1.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

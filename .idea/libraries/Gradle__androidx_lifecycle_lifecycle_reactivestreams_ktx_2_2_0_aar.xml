@@ -2,7 +2,6 @@
   <library name="Gradle: androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/05130a46f5ed7ead9008cdb81f40be8e/transformed/jetified-lifecycle-reactivestreams-ktx-2.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05130a46f5ed7ead9008cdb81f40be8e/transformed/jetified-lifecycle-reactivestreams-ktx-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05130a46f5ed7ead9008cdb81f40be8e/transformed/jetified-lifecycle-reactivestreams-ktx-2.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
