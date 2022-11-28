@@ -6,8 +6,8 @@
 
 Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
 
-1. Checkout **master** for Dagger 2
-2. Checkout **hilt_multi_module** for Hilt
+1. Checkout **master** for **Dagger 2**
+2. Checkout **hilt_multi_module** for **Hilt**
 
 <br>
 
