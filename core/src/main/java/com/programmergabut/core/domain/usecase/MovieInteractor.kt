@@ -20,6 +20,4 @@ class MovieInteractor @Inject constructor(private val movieRepository: IMovieRep
     override fun insertFavMovieID(movieID: Int) = movieRepository.insertFavMovieID(movieID)
 
     override fun deleteFavMovieID(movieID: Int) = movieRepository.deleteFavMovieID(movieID)
-
-    override fun getListNotification() = movieRepository.getListNotification()
 }

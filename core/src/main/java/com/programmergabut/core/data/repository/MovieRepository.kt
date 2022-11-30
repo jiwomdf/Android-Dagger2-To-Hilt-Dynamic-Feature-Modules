@@ -273,44 +273,4 @@ class MovieRepository @Inject constructor(
             .blockingGet()
     }
 
-    override fun getListNotification(): Flowable<List<Notification>> {
-        return Flowable.fromCallable {
-            Thread.sleep(1000)
-            listOf(
-                Notification(
-                    id = 1,
-                    title = "Notification 1",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
-                ),
-                Notification(
-                    id = 2,
-                    title = "Notification 2",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
-                ),
-                Notification(
-                    id = 3,
-                    title = "Notification 3",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
-                ),
-                Notification(
-                    id = 4,
-                    title = "Notification 4",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
-                ),
-                Notification(
-                    id = 5,
-                    title = "Notification 5",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
-                ),
-                Notification(
-                    id = 6,
-                    title = "Notification 6",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
-                ),
-            )
-        }
-        .subscribeOn(Schedulers.io())
-        .observeOn(Schedulers.io())
-    }
-
 }

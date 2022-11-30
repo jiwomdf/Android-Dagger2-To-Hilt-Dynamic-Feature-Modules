@@ -14,5 +14,4 @@ interface MovieUseCase {
     fun getFavMovies(): Flowable<Resource<List<Movie>>>
     fun insertFavMovieID(movieID: Int)
     fun deleteFavMovieID(movieID: Int)
-    fun getListNotification(): Flowable<List<Notification>>
 }
