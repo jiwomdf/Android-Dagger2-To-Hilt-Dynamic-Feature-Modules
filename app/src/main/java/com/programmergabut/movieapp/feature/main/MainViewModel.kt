@@ -40,4 +40,11 @@ class MainViewModel @Inject constructor(private val useCase: MovieUseCase) : Bas
                 })
         )
     }
+
+    fun updateFcmToken(uname: String, token: String){
+        //TODO
+        /**
+         * save FCM Token to the server based on it username / unique identity
+         */
+    }
 }

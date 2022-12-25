@@ -1,19 +1,15 @@
 package com.programmergabut.movieapp.feature.notification
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.programmergabut.core.data.Resource
-import com.programmergabut.core.domain.model.Notification
 import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.databinding.ActivityNotificationBinding
-import com.programmergabut.movieapp.databinding.ListNotificationBinding
-import com.programmergabut.movieapp.util.*
+import com.programmergabut.movieapp.util.setTransparentStatusBar
+import com.programmergabut.movieapp.util.showFadeLoading
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -75,46 +71,23 @@ class NotificationActivity: BaseActivity<ActivityNotificationBinding>() {
             showFadeLoading(llInfo1.root, null, isVisible)
             showFadeLoading(vDivider1.root, null, isVisible)
 
+            showFadeLoading(clTitle2.root, null, isVisible)
             showFadeLoading(tvDesc2.root, null, isVisible)
             showFadeLoading(ivIcon2.root, null, isVisible)
             showFadeLoading(llInfo2.root, null, isVisible)
             showFadeLoading(vDivider2.root, null, isVisible)
 
+            showFadeLoading(clTitle3.root, null, isVisible)
             showFadeLoading(tvDesc3.root, null, isVisible)
             showFadeLoading(ivIcon3.root, null, isVisible)
             showFadeLoading(llInfo3.root, null, isVisible)
             showFadeLoading(vDivider3.root, null, isVisible)
 
+            showFadeLoading(clTitle4.root, null, isVisible)
             showFadeLoading(tvDesc4.root, null, isVisible)
             showFadeLoading(ivIcon4.root, null, isVisible)
             showFadeLoading(llInfo4.root, null, isVisible)
             showFadeLoading(vDivider4.root, null, isVisible)
-        }
-    }
-
-    class NotificationAdapter: RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>(){
-
-        var listData = mutableListOf<Notification>()
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationViewHolder {
-            val binding = ListNotificationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            return NotificationViewHolder(binding)
-        }
-
-        override fun onBindViewHolder(holder: NotificationViewHolder, position: Int) =
-            holder.bind(listData[position])
-
-
-        override fun getItemCount(): Int = listData.size
-
-        class NotificationViewHolder(private val binding: ListNotificationBinding):
-            RecyclerView.ViewHolder(binding.root){
-            fun bind(data: Notification) {
-                with(binding){
-                    tvTitle.text = data.title
-                    tvDesc.text = data.dsc
-                }
-            }
         }
     }
 

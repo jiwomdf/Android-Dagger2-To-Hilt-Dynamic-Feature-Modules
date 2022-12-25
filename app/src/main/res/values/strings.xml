@@ -7,6 +7,7 @@
     <string name="oke">Oke</string>
     <string name="notification">Notification</string>
     <string name="search_movie_here">Search movie here…</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
 
     <!-- Bottom Sheet Error -->
     <string name="text_error_title">Error Occurred</string>
