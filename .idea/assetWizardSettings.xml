@@ -327,7 +327,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/Android/SDK/icons/material/materialicons/star/baseline_star_24.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material/icons/materialicons/movie_filter/baseline_movie_filter_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -337,9 +337,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_starts_detail" />
-                            <entry key="sourceFile" value="C:\Users\User\Downloads\search-01.svg" />
+                            <entry key="color" value="ff4747" />
+                            <entry key="outputName" value="ic_movie" />
+                            <entry key="sourceFile" value="/C:\Users\User\Downloads\search-01.svg" />
                           </map>
                         </option>
                       </PersistentState>

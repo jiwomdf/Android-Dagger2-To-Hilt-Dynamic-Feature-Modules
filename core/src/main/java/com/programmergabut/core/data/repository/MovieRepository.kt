@@ -279,33 +279,33 @@ class MovieRepository @Inject constructor(
             listOf(
                 Notification(
                     id = 1,
-                    title = "Notification 1",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
+                    title = "Movie 1",
+                    dsc = "New movie has arrived! Please click here to see"
                 ),
                 Notification(
                     id = 2,
-                    title = "Notification 2",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
+                    title = "Movie 2",
+                    dsc = "New movie has arrived! Please click here to see"
                 ),
                 Notification(
                     id = 3,
-                    title = "Notification 3",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
+                    title = "Movie 3",
+                    dsc = "New movie has arrived! Please click here to see"
                 ),
                 Notification(
                     id = 4,
-                    title = "Notification 4",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
+                    title = "Movie 4",
+                    dsc = "New movie has arrived! Please click here to see"
                 ),
                 Notification(
                     id = 5,
-                    title = "Notification 5",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
+                    title = "Movie 5",
+                    dsc = "New movie has arrived! Please click here to see"
                 ),
                 Notification(
                     id = 6,
-                    title = "Notification 6",
-                    dsc = "Your October 2022 incentive payment has been sent, please check your bank account"
+                    title = "Movie 6",
+                    dsc = "New movie has arrived! Please click here to see"
                 ),
             )
         }
