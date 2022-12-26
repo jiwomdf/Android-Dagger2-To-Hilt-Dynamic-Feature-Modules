@@ -42,25 +42,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Reward - LinkAja" />
-
-            <TextView
-                android:id="@+id/tv_bearer_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" | "
-                android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@id/tv_title"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_info_color"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@id/tv_bearer_title"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="Rp 1.000.000" />
+                tools:text="New Movie Arrived!" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -70,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textSize="11sp"
-            tools:text="Pembayaran insentif bulan Oktober 2022 kamu udah dikirim, cek akun LinkAja kamu ya" />
+            tools:text="New movie has arrived! Please click here to see" />
 
     </LinearLayout>
 
