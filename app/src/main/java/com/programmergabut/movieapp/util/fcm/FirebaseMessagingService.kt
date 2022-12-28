@@ -50,8 +50,8 @@ class FirebaseMessagingService : FirebaseMessagingService() {
     private fun sendNotification(title: String, description: String, data: MutableMap<String, String>) {
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-        val daa = data["fcm_navigation_extra"] ?: ""
-        intent.putExtra(FcmUtil.extraName, daa)
+        val fcmData = data["fcm_navigation_extra"] ?: ""
+        intent.putExtra(FcmUtil.extraName, fcmData)
 
         val pendingIntent = PendingIntent.getActivity(
             this,

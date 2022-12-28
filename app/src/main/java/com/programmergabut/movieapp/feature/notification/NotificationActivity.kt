@@ -59,6 +59,10 @@ class NotificationActivity: BaseActivity<ActivityNotificationBinding>() {
                 }
             }
         }
+
+        binding.icBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun setLoading(isVisible: Boolean) {
