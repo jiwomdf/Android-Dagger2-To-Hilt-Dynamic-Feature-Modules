@@ -9,7 +9,7 @@ Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
 1. Checkout **master** for Dagger 2
 2. Checkout **hilt_multi_module** for Hilt
 
-<img src="https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Fcm%2Fimgimg.png?alt=media&token=ba0fd3fe-6ea2-486c-9d28-c0f850c1557d" width="190" height="380" style="margin-left:10px"/>   <img src="https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Fcm%2Fimage6.png?alt=media&token=19fc0b60-7ac8-46c0-a50b-213d6facce5d" width="190" height="380" style="margin-left:20px"/> 
+<img src="https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Fcm%2Fimgimg.png?alt=media&token=ba0fd3fe-6ea2-486c-9d28-c0f850c1557d" width="190" height="380" style="margin-left:10px"/>   <img src="https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Dagger%202%20to%20Hilt%20In%20Multi%20Module%20App%2Fss22.png?alt=media&token=d1322791-7e5f-46cb-b753-5caac9a80fb3" width="190" height="380" style="margin-left:20px"/> 
 
 ## Project Stack
 1. Dagger 2 / Hilt
