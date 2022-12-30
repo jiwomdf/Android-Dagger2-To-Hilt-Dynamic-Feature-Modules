@@ -28,4 +28,4 @@ Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
 
 ---
 
-#### Check Also this article! [Full Guide to Implement Firebase Cloud Messaging (FCM) in Android App](https://github.com/jiwomdf/Android-Dagger2-To-Hilt-Dynamic-Feature-Modules/tree/hilt_notification)
+#### Check Also this branch! [Full Guide to Implement Firebase Cloud Messaging (FCM) in Android App](https://github.com/jiwomdf/Android-Dagger2-To-Hilt-Dynamic-Feature-Modules/tree/hilt_notification)
