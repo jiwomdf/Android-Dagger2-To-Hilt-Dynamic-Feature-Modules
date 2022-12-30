@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import com.programmergabut.movieapp.R
 import com.programmergabut.movieapp.base.BaseActivity
 import com.programmergabut.movieapp.databinding.ActivityMainBinding
-import com.programmergabut.movieapp.feature.notification.NotificationActivity
 import com.programmergabut.movieapp.util.PackageUtil
 import com.programmergabut.movieapp.util.setTransparentStatusBar
 import dagger.hilt.android.AndroidEntryPoint
