@@ -1,7 +1,6 @@
 # Android-Dagger2-To-Hilt-Multi-Module
 
 #### Complete Article : [Dagger 2 to Hilt in Multi Module App](https://www.katilijiwo.com/dagger-2-to-hilt-in-multi-module-app/)
-
 ## Migrating Dagger 2 to Hilt in Multi Module App
 
 Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
@@ -25,3 +24,8 @@ Here is shown how to migrating your Dynamic Feature App from Dagger 2 to Hilt
 2. Modular (Dynamic Feature)
 
 ![Project Structure](https://firebasestorage.googleapis.com/v0/b/personalwebsite-cbad4.appspot.com/o/Dagger%202%20to%20Hilt%20In%20Multi%20Module%20App%2Fmovieapp%20(1).jpg?alt=media&token=b772f3eb-8ca4-4624-ac40-806eb3a7374d)
+
+
+---
+
+#### Check Also this article! [Full Guide to Implement Firebase Cloud Messaging (FCM) in Android App](https://github.com/jiwomdf/Android-Dagger2-To-Hilt-Dynamic-Feature-Modules/tree/hilt_notification)
